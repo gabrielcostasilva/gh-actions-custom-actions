@@ -1,3 +1,5 @@
+name: Call composite actions
+
 on: 
   workflow_dispatch:
     inputs:
