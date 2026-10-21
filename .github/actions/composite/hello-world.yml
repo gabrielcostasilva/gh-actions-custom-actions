@@ -1,0 +1,14 @@
+name: Hello World Composite Actions
+
+description: Playing with composite actions for the first time
+
+inputs:
+  a_name: 
+    description: The person name
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        echo "Hello ${{ inputs.a_name }}!"

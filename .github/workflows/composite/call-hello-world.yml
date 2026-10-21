@@ -1,0 +1,15 @@
+on: 
+  workflow_dispatch:
+    inputs:
+      person:
+        type: string
+        required: true
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: ./.github/actions/hello-world.yml
+        with:
+          a_name: ${{ inputs.person }}
+
