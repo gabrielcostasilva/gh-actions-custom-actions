@@ -9,6 +9,7 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/hello-world
         with:
           a_name: ${{ inputs.person }}
